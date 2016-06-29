@@ -1,0 +1,1633 @@
+/************************* Gizmo  *************************/
+.compose-mode .content-container{
+    min-height:500px;
+}
+.compose-mode .vc_element.vc_element,
+.view-mode .vc_element.vc_element{
+    padding: 0px;
+}
+
+.element-md_tab,
+.element-md_modernTab,
+.compose-mode .vc_controls-column > div > .element-md_tab.vc_element .vc_advanced.vc_advanced,
+.compose-mode .vc_controls-column > div > .element-md_modernTab.vc_element .vc_advanced.vc_advanced{
+    width: 66px ;
+    border-radius: 3px;
+
+}
+
+.element-md_accordion_tab,
+.element-md_toggle_tab,
+.element-md_toggle_tab2,
+.compose-mode .vc_controls-column > div > .element-md_accordion_tab.vc_element .vc_advanced.vc_advanced,
+.compose-mode .vc_controls-column > div > .element-md_toggle_tab.vc_element .vc_advanced.vc_advanced,
+.compose-mode .vc_controls-column > div > .element-md_toggle_tab2.vc_element .vc_advanced.vc_advanced{
+    width: 99px;
+    border-radius: 3px;
+}
+
+.compose-mode .vc_element.element-md_accordion_tab,
+.compose-mode .vc_element.element-md_toggle_tab,
+.compose-mode .vc_element.element-md_toggle_tab2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.compose-mode .vc_element.vc_empty .vc_empty-element, .view-mode .vc_element.vc_empty .vc_empty-element{
+    min-height: 300px!important;
+    transition:transform 400ms;
+}
+
+.compose-mode .vc_element.vc_empty .vc_empty-element:after,
+.view-mode .vc_element.vc_empty .vc_empty-element:after{
+    height: 122px!important;
+}
+
+.compose-mode .vc_element.vc_empty .vc_empty-element:after{
+    background: transparent url(../../../assets/img/empty-row.png) no-repeat center!important;
+    transform: translateY(-50%);
+}
+
+.view-mode .vc_element.vc_empty .vc_empty-element:after{
+    background: none!important;
+}
+
+.view-mode .vc_element.vc_empty .vc_empty-element,
+.view-mode .vc_element.vc_empty .vc_empty-element:after{
+    cursor: auto!important;
+}
+
+.vc_move-vc_column.vc_element-move.ui-sortable-handle {
+    display: none;
+}
+
+
+.compose-mode .vc_controls{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.compose-mode .vc_controls > .vc_controls-out-tl.vc_controls-out-tl{
+    width : 100%;
+    height: 0;
+    left: 0 !important;
+    top: -46px ;
+    /*overflow: hidden;*/
+}
+
+.compose-mode .controls-in .vc_controls > .vc_controls-out-tl{
+    top: 0 ;
+}
+
+/*    Row    */
+/* use for main content doesn't go under customizer */
+.vc_row.full_size{
+    margin-left: 0 !important;
+    margin-right:0 !important;
+}
+
+.vc_row{
+    clear: both;
+}
+
+.vc_controls-bc{
+    padding-bottom: 0px;
+}
+
+.vc_empty-placeholder{
+    margin-bottom:45px !important;
+}
+
+.compose-mode .vc_vc_row > .vc_parallax{
+    padding-top: 0;
+}
+
+.compose-mode div[class*='parent-vc_row'],
+.compose-mode .vc_controls-container > div > .vc_parent{
+    width: 420px ;
+    height: 43px ;
+    margin-top: -47px;
+    opacity: 0;
+    transition: opacity .15s;
+}
+
+.vc_element.vc_vc_row.vc_container-block:hover div[class*='parent-vc_row']{
+    margin-top: 0;
+}
+
+.compose-mode .vc_vc_row_inner .vc_vc_column_inner .vc_controls-out-tl{
+    top: 0;
+}
+
+.compose-mode .vc_element.vc_vc_row_inner.vc_vc_row_inner.vc_vc_row_inner {
+    margin-top: 50px !important;
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_advanced{
+    width: auto !important;
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-delete,
+.compose-mode div[class*='parent-vc_row'] .vc_move-vc_row,
+.compose-mode div[class*='parent-vc_row'] .vc_move-vc_row_inner,
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-clone,
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-layout,
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-edit,
+.compose-mode div[class*='element-vc_column']  .vc_control-btn-delete,
+.compose-mode div[class*='element-vc_column']  .vc_control-btn-edit{
+    position: absolute;
+    height: 42px;
+    width: 42px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: solid 1px rgba(142,142,142,.28);
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-delete{
+    left: 44px;
+    width: 43px;
+    background:#434343 url("../../assets/img/vc-ui-icons/row_delete.png") no-repeat center;
+    transition: background .4s;
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-delete .vc_btn-content{ display: none !important;}
+
+.compose-mode div[class*='parent-vc_row'] .vc_move-vc_row.vc_element-move,
+.compose-mode div[class*='parent-vc_row'] .vc_move-vc_row_inner.vc_element-move{
+    left: 0;
+    width: 43px;
+    cursor: move;
+    background:#434343 url("../../assets/img/vc-ui-icons/row_move.png") no-repeat center;
+    transition: background .4s;
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-clone{
+    left: 88px;
+    width: 44px;
+    background:#434343 url("../../assets/img/vc-ui-icons/row-clone.png") no-repeat center;
+    transition: background .4s;
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-layout:before{
+    content: "";
+    width: 1px;
+    height: 14px;
+    background-color: #a1a1a1;
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 0;
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-layout:before:hover{
+    background-color: #434343;
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-layout{
+    width: 149px;
+    left: 271px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background:#434343 url("../../assets/img/vc-ui-icons/row_layout.png") no-repeat center;
+    transition: background .4s;
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-edit{
+    left: 134px;
+    width: 137px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background:#434343 url("../../assets/img/vc-ui-icons/row_setting.png") no-repeat center;
+    transition: background .7s;
+}
+
+.compose-mode div[class*='parent-vc_row_inner']  .vc_control-btn-edit,
+.compose-mode div[class*='parent-vc_row_inner'] .vc_control-btn-layout,
+.compose-mode div[class*='parent-vc_row_inner'] .vc_control-btn-delete,
+.compose-mode div[class*='parent-vc_row_inner'] .vc_move-vc_row.vc_element-move,
+.compose-mode div[class*='parent-vc_row_inner'] .vc_move-vc_row_inner.vc_element-move{
+    background-color: #52e2aa;
+}
+.compose-mode div[class*='parent-vc_row_inner']  .vc_control-btn-edit{
+    left: 88px;
+    background-image: url(../../assets/img/vc-ui-icons/rowinner_setting.png);
+    width: 150px;
+
+}
+
+.compose-mode div[class*='parent-vc_row_inner'] .vc_control-btn-layout{
+    left: 238px;
+}
+
+.compose-mode div[class*='parent-vc_row_inner'] .vc_control-btn-clone{
+    display: none !important;
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-prepend,
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-switcher,
+.vc_element.vc_vc_column.vc_container-block .vc_controls-out-tl div[class*='parent-vc_row'],
+.vc_vc_row_inner .vc_vc_column_inner.vc_container-block .vc_controls-out-tl div[class*='parent-vc_row']{
+    z-index: -9999;
+    margin-top:0px;
+    opacity: 0;
+    display: none;
+}
+
+.vc_vc_row .vc_vc_column.controls-hover > .vc_controls-column > .vc_controls-out-tl div[class*='parent-vc_row'],
+.vc_vc_row_inner .vc_vc_column_inner.controls-hover > .vc_controls-column > .vc_controls-out-tl div[class*='parent-vc_row']{
+    z-index: 2;
+    opacity: 1;
+}
+
+.vc_vc_row .vc_vc_column.controls-hover > .vc_controls-column > .vc_controls-out-tl .parent-vc_row,
+.vc_vc_row_inner .vc_vc_column_inner.controls-hover > .vc_controls-column > .vc_controls-out-tl .parent-vc_row{
+    display: block;
+}
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-clone .vc_btn-content,
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-layout .vc_btn-content,
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-edit .vc_btn-content,
+.compose-mode div[class*='parent-vc_row'] .vc_move-vc_row .vc_btn-content,
+.compose-mode div[class*='parent-vc_row'] .vc_move-vc_row_inner .vc_btn-content{
+    visibility:hidden;
+}
+
+.vc_vc_row.vc_container-block .vc_vc_column.vc_container-block:nth-of-type(1) .vc_controls-out-tl,
+.vc_vc_row_inner.vc_container-block .vc_vc_column_inner.vc_container-block:nth-of-type(1) .vc_controls-out-tl{
+    height: 45px;
+    height: 0;
+    z-index: 1010;
+}
+
+.compose-mode .vc_row .vc_vc_column:hover{
+    outline: none;
+}
+
+.view-mode .vc_row .vc_vc_column:hover{
+    outline: none;
+}
+
+.vc_row .vc_vc_column:first-child{
+    border-left: none;
+}
+/* row controllers hover */
+
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-clone:hover,
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-layout:hover,
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-edit:hover,
+.compose-mode div[class*='parent-vc_row'] .vc_move-vc_row.vc_element-move:hover,
+.compose-mode div[class*='parent-vc_row'] .vc_move-vc_row_inner.vc_element-move:hover,
+.compose-mode div[class*='parent-vc_row'] .vc_control-btn-delete:hover{
+    background-color: rgba(150, 150, 150, 0.77);
+}
+
+.compose-mode div[class*='parent-vc_row_inner']  .vc_control-btn-edit:hover,
+.compose-mode div[class*='parent-vc_row_inner'] .vc_control-btn-layout:hover,
+.compose-mode div[class*='parent-vc_row_inner'] .vc_control-btn-delete:hover,
+.compose-mode div[class*='parent-vc_row_inner'] .vc_move-vc_row.vc_element-move:hover,
+.compose-mode div[class*='parent-vc_row_inner'] .vc_move-vc_row_inner.vc_element-move:hover{
+    background-color:rgba(82,226,170,.77) ;
+
+}
+
+
+/*  column  */
+
+.compose-mode .vc_controls.vc_controls-column.vc_controls-column{
+    height: 0;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    visibility: visible !important;
+}
+
+.compose-mode div[class*='element-vc_column']{
+    width: 42px;
+    height: 42px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 3px;
+    opacity: 0;
+    position: absolute;
+    top: 44px;
+    right: 1px;
+    transition:opacity .3s;
+    transition-delay: .3s;
+
+}
+.vc_row .vc_vc_column:hover div[class*='element-vc_column']{
+    opacity: 1;
+    position: absolute;
+    top: 44px;
+    right: 1px;
+}
+
+.compose-mode div[class*='element-vc_column'] .vc_move-vc_column,
+.compose-mode div[class*='element-vc_column'] .vc_control-btn-prepend,
+.compose-mode div[class*='element-vc_column']  .vc_control-btn-delete{
+    display: none !important;
+}
+
+.compose-mode div[class*='element-vc_column']  .vc_control-btn-edit{
+    left: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 3px;
+    background: rgba(0,0,0,.35) url("../../assets/img/vc-ui-icons/column-setting.png") no-repeat center;
+}
+
+.vc_row .vc_vc_column:hover div.element-vc_column .vc_control-btn-edit,
+.vc_row_inner .vc_vc_column_inner:hover div.element-vc_column_inner .vc_control-btn-edit{
+    background-position: 12px 12px;
+}
+
+.vc_row .vc_vc_column:hover div[class*='element-vc_column'] .vc_control-btn-edit:hover{
+    background-color:rgba(150, 150, 150, 0.77)
+}
+
+.compose-mode div[class*='element-vc_column']  .vc_control-btn-edit   .vc_btn-content{
+    visibility: hidden;
+}
+
+/* shortcode control */
+
+.compose-mode .vc_controls > .vc_controls-cc.vc_controls-cc{
+    width: 100%;
+    height: 100%;
+    top: 0 !important;
+    left: 0;
+    background-color: transparent ;
+    transition: background .3s;
+    transform: translate(0,0);
+}
+
+.compose-mode .vc_vc_column .vc_element.vc_vc_column_text .vc_controls > .vc_controls-cc{
+    width : 100%;
+    height : 100%;
+    left : 50% ;
+    top : 50% !important;
+    transform : translate( -50% , -50% );
+}
+
+.compose-mode .vc_controls > .vc_controls-cc:hover{
+    background-color: rgba(56,224,167,.3) !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 15px solid rgb(56,224,167);
+    border-image: url(../img/vc-ui-icons/conrner.png) 46% repeat;
+}
+
+.compose-mode .vc_controls > .vc_controls-cc .vc_element-move{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    cursor: move;
+}
+
+.compose-mode .vc_vc_column .vc_element.vc_vc_column_text .vc_controls > .vc_controls-cc .vc_element-move{
+    width : 50%;
+    height : 50%;
+    left : 50%;
+    top : 50%;
+    transform : translate(-50%,-50%);
+}
+
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-edit,
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-clone,
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-delete,
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-align,
+.compose-mode  .vc_controls > .vc_controls-cc .vc_element-move .md-move-gizmo{
+    height: 49px;
+    width: 49px;
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 3px !important;
+    background:#434343  no-repeat center;
+    transition: all 200ms linear 100ms;
+}
+.compose-mode  .vc_controls > .vc_controls-cc .vc_element-move .md-move-gizmo {
+    cursor: move;
+    background: #434343 url("../../assets/img/vc-ui-icons/row_move.png") no-repeat center center;
+    left:146px;
+}
+
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-delete{
+    background-image: url("../img/vc-ui-icons/shortcode-delete.png");
+    left: 44px;
+}
+
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-clone{
+    background-image: url("../img/vc-ui-icons/row-clone.png");
+    background-size: 19px;
+    left:-58px;
+}
+
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-edit{
+    background-image: url("../img/vc-ui-icons/shortcode-setting.png");
+    left: -160px;
+}
+
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-align{
+    left: 146px;
+}
+
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-left,
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-right,
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-center{
+    position: absolute;
+    height: 100%;
+    width: 17px;
+}
+
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-left{
+    left:0;
+    top:0;
+    width:19px;
+}
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-center{
+    left:19px;
+    top:0;
+    width: 12px;
+}
+.compose-mode  .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-right{
+    left:31px;
+    top:0;
+}
+
+.compose-mode .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-left:after{
+    margin-left: 15px;
+}
+.compose-mode .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-center:after{
+    margin-left: 4px;
+}
+
+.compose-mode .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn:after{
+    content: " ";
+    height: 21px;
+    width: 4px;
+    background: #595959;
+    display: block;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+.compose-mode .md-align-right ~ .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-right:after,
+.compose-mode .md-align-left ~ .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-left:after,
+.compose-mode .md-align-center ~ .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn-center:after{
+    background: #3dd69b;
+}
+.compose-mode .md-align-right ~ .vc_controls > .vc_controls-cc .vc_control-btn-align:hover .vc_control-btn-right:after,
+.compose-mode .md-align-left ~ .vc_controls > .vc_controls-cc .vc_control-btn-align:hover .vc_control-btn-left:after,
+.compose-mode .md-align-center ~ .vc_controls > .vc_controls-cc .vc_control-btn-align:hover .vc_control-btn-center:after{
+    background: #595959;
+}
+.compose-mode .vc_controls > .vc_controls-cc .vc_control-btn-align .vc_control-btn:hover:after{
+    background: #fff!important;
+}
+
+.compose-mode .vc_element:not(.vc_vc_column_text):not(.element-vc_column) .vc_controls > .vc_controls-cc:hover .vc_control-btn-edit,
+.compose-mode .vc_element:not(.vc_vc_column_text):not(.element-vc_column) .vc_controls > .vc_controls-cc:hover .vc_control-btn-clone,
+.compose-mode .vc_element:not(.vc_vc_column_text):not(.element-vc_column) .vc_controls > .vc_controls-cc:hover .vc_control-btn-delete,
+.compose-mode .vc_element:not(.vc_vc_column_text):not(.element-vc_column) .vc_controls > .vc_controls-cc:hover .vc_control-btn-align,
+.compose-mode .vc_element:not(.vc_vc_column_text):not(.element-vc_column) .vc_controls > .vc_controls-cc:hover .md-move-gizmo,
+.compose-mode .vc_element:not(.vc_vc_column_text):not(.element-vc_column_inner) .vc_controls > .vc_controls-cc:hover .vc_control-btn-edit,
+.compose-mode .vc_element:not(.vc_vc_column_text):not(.element-vc_column_inner) .vc_controls > .vc_controls-cc:hover .vc_control-btn-clone,
+.compose-mode .vc_element:not(.vc_vc_column_text):not(.element-vc_column_inner) .vc_controls > .vc_controls-cc:hover .vc_control-btn-delete,
+.compose-mode .vc_element:not(.vc_vc_column_text):not(.element-vc_column_inner) .vc_controls > .vc_controls-cc:hover .md-move-gizmo,
+.compose-mode .vc_element:not(.vc_vc_column_text):not(.element-vc_column_inner) .vc_controls > .vc_controls-cc:hover .vc_control-btn-align{
+    opacity: 1;
+}
+
+.compose-mode .vc_controls > .vc_controls-cc:hover .vc_control-btn-edit:hover{
+    background:rgba(150, 150, 150, 0.77) url(../img/vc-ui-icons/shortcode-setting-hover.png) no-repeat center;
+}
+
+.compose-mode .vc_controls > .vc_controls-cc:hover .vc_control-btn-clone:hover{
+    background:rgba(150, 150, 150, 0.77) url(../img/vc-ui-icons/row-clone-hover.png) no-repeat center;
+    background-size: 19px;
+}
+
+.compose-mode .vc_controls > .vc_controls-cc:hover .vc_control-btn-delete:hover{
+    background:rgba(150, 150, 150, 0.77) url(../img/vc-ui-icons/shortcode-delete-hover.png) no-repeat center;
+}
+
+.compose-mode .vc_controls > .vc_controls-cc .vc_control-btn-clone .vc_btn-content,
+.compose-mode .vc_controls > .vc_controls-cc .vc_control-btn-edit  .vc_btn-content,
+.compose-mode .vc_controls > .vc_controls-cc .vc_element-move      .vc_btn-content,
+.compose-mode .vc_controls > .vc_controls-cc .vc_control-btn-delete .vc_btn-content,
+.compose-mode .vc_md_portfolio_multisize .vc_controls > .vc_controls-cc:hover .vc_element-move .vc_btn-content{
+    visibility: hidden;
+}
+
+.compose-mode .vc_controls > .vc_controls-cc:hover .vc_element-move .vc_btn-content{
+    visibility: visible;
+    padding: 0px !important;
+    background-position: 0 56px !important;
+    color: rgb(84, 84, 84) !important;
+    font-size: 14px !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: -80px;
+    margin: auto;
+    position: absolute;
+    display: inline !important;
+    width: 151px !important;
+    height: 28px;
+    line-height: 28px !important;
+    text-align: center;
+}
+
+.compose-mode .vc_controls-cc .vc_element-move .vc_btn-content:hover,
+.compose-mode .vc_controls-cc .vc_child-element-move .vc_btn-content:hover,
+.compose-mode .vc_controls-cc .vc_control-btn .vc_btn-content:hover{
+    background-color : transparent !important ;
+}
+
+.droppable-hover{
+    border: none;
+}
+.over-empty-element{
+    transform: scale(.8);
+}
+.droppable-column{
+    background-color:#aaa!important;
+    border:1px dashed #ccc!important;
+}
+.compose-mode .vc_placeholder.vc_placeholder{
+    height:0px;
+    margin:auto;
+    text-align: center;
+    background: none!important;
+    overflow: visible;
+    position: relative;
+}
+.vc_placeholder.insert-bottom-of-me{
+    border-top: 2px solid #000;
+    animation:insert-side-of-me 400ms forwards;
+}
+.vc_placeholder.insert-bottom-of-me:after{
+    content: '\e840';
+    font-family: 'pixflow-font-library';
+    display: inline-block;
+    bottom:0;
+    position: absolute;
+    left:50%;
+    margin-left: -5px;
+    font-size: 20px;
+}
+.vc_placeholder.insert-top-of-me{
+    border-bottom: 2px solid #000;
+    animation:insert-side-of-me 400ms forwards;
+}
+.vc_placeholder.insert-top-of-me:after{
+    content: '\e83f';
+    font-family: 'pixflow-font-library';
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.vc_placeholder.insert-between div{
+    border-top: 2px solid #000;
+    position: absolute;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    left: 50%;
+}
+.compose-mode .vc_placeholder.vc_placeholder.insert-between{
+    animation:insert-between 400ms forwards;
+    position: relative;
+    overflow: hidden;
+}
+.vc_placeholder.insert-between:after{
+    content: '\e840';
+    font-family: 'pixflow-font-library';
+    position: absolute;
+    bottom:0;
+    font-size: 20px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.vc_placeholder.insert-between:before{
+    content: '\e83f';
+    font-family: 'pixflow-font-library';
+    position: absolute;
+    top:0;
+    font-size: 20px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.vc_placeholder.insert-top-of-me:after,.vc_placeholder.insert-top-of-me:before,
+.vc_placeholder.insert-bottom-of-me:after,.vc_placeholder.insert-bottom-of-me:before,
+.vc_placeholder.insert-between:after,.vc_placeholder.insert-between:before{
+    animation: fadein-show 800ms forwards;
+}
+@keyframes fadein-show{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@keyframes insert-side-of-me {
+    from{
+        height:0;
+        max-width:0;
+    }
+    to{
+        height:30px;
+        max-width: 250px;
+    }
+}
+@keyframes insert-between {
+    from{
+        height:0;
+        max-width:0;
+    }
+    to{
+        height:40px;
+        max-width: 250px;
+    }
+}
+/****** TABS && Accordion ******/
+
+.compose-mode .vc_controls > .vc_controls-out-tr{
+    right : auto !important;
+    width : 100%;
+    height: 0;
+}
+
+.compose-mode .vc_md_accordion_tab .vc_controls > .vc_controls-out-tr,
+.compose-mode .vc_md_toggle_tab .vc_controls > .vc_controls-out-tr,
+.compose-mode .vc_md_toggle_tab2 .vc_controls > .vc_controls-out-tr{
+    right : 0 !important;
+}
+
+.parent-md_tabs,
+.parent-md_modernTabs,
+.parent-md_accordion,
+.parent-md_toggle,
+.parent-md_toggle2{
+    width: 40px;
+    height: 124px;
+    background-color: #47cf84;
+    right: 0;
+    position: absolute;
+    top: -54px;
+    padding-top: 30px;
+}
+
+.parent-md_accordion,
+.parent-md_toggle,
+.parent-md_toggle2{
+    top: 30px;
+    opacity: 0;
+}
+
+.compose-mode .parent-md_tabs:before,
+.compose-mode .parent-md_modernTabs:before,
+.compose-mode .parent-md_accordion:before,
+.compose-mode .parent-md_toggle:before,
+.compose-mode .parent-md_toggle2:before{
+    content: "TABS";
+    width: 30px;
+    height: 30px;
+    display: block;
+    color: #FFF;
+    position: absolute;
+    font-size: 10.33px;
+    margin: 0 auto;
+    top: 0;
+    left: 5px;
+    line-height: 27px;
+    padding: 0 3px;
+}
+
+.compose-mode .parent-md_accordion:before{
+    content: "ACCR";
+}
+
+.compose-mode .parent-md_toggle:before,
+.compose-mode .parent-md_toggle2:before{
+    content: "Toggle";
+}
+
+.compose-mode .vc_controls-column > div > .vc_parent:not(.parent-md_hor_tabs) .vc_control-btn .vc_btn-content:hover,
+.compose-mode .vc_controls-column > div > .vc_parent:not(.parent-md_hor_tabs2) .vc_control-btn .vc_btn-content:hover{
+    background:#FFF !important;
+    opacity: .5;
+    border-color: transparent !important;
+
+}
+
+.compose-mode .vc_controls-column > div > .vc_parent:not(.parent-md_hor_tabs) .vc_control-btn .vc_btn-content:hover,
+.compose-mode .vc_controls-column > div > .vc_parent:not(.parent-md_hor_tabs2) .vc_control-btn .vc_btn-content:hover{
+    background-color: transparent!important;
+    opacity: 1;
+}
+
+.compose-mode .vc_element.vc_element .wpb_md_toggle2 .wpb_accordion_section{
+    margin-top: 20px !important;
+}
+
+.parent-md_tabs .vc_move-md_tabs.vc_element-move,
+.parent-md_modernTabs .vc_move-md_modernTab.vc_element-move,
+.parent-md_tabs .vc_move-md_tabs.parent-md_accordion,
+.parent-md_tabs .vc_move-md_tabs.parent-md_toggle,
+.parent-md_tabs .vc_move-md_tabs.parent-md_toggle2{
+    display: block;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.compose-mode .parent-md_tabs .vc_element-move .vc_btn-content,
+.compose-mode .parent-md_modernTabs .vc_element-move .vc_btn-content,
+.compose-mode .parent-md_toggle .vc_element-move .vc_btn-content,
+.compose-mode .parent-md_toggle2 .vc_element-move .vc_btn-content,
+.compose-mode .parent-md_accordion .vc_element-move .vc_btn-content{
+    background-image: none !important;
+}
+
+.compose-mode .parent-md_tabs .vc_element-move,
+.compose-mode .parent-md_modernTabs .vc_element-move,
+.compose-mode .parent-md_toggle .vc_element-move,
+.compose-mode .parent-md_toggle2 .vc_element-move,
+.compose-mode .parent-md_accordion .vc_element-move{
+    background: url(../img/vc-ui-icons/tab_move.png) no-repeat center 7px;
+    height: 27px;
+    display: block;
+    cursor: move;
+}
+
+.compose-mode .parent-md_tabs .vc_element-move:before,
+.compose-mode .parent-md_tabs .vc_element-move:after,
+.compose-mode .parent-md_modernTabs .vc_element-move:before,
+.compose-mode .parent-md_modernTabs .vc_element-move:after,
+.compose-mode .parent-md_toggle .vc_element-move:before,
+.compose-mode .parent-md_toggle .vc_element-move:after,
+.compose-mode .parent-md_toggle2 .vc_element-move:before,
+.compose-mode .parent-md_toggle2 .vc_element-move:after,
+.compose-mode .parent-md_accordion .vc_element-move:before,
+.compose-mode .parent-md_accordion .vc_element-move:after,
+.compose-mode .parent-md_tabs .vc_control-btn-delete:before ,
+.compose-mode .parent-md_modernTabs .vc_control-btn-delete:before,
+.compose-mode .parent-md_toggle .vc_control-btn-delete:before ,
+.compose-mode .parent-md_toggle2 .vc_control-btn-delete:before ,
+.compose-mode .parent-md_accordion .vc_control-btn-delete:before {
+    content: "";
+    width: 22px;
+    background-color: rgba(255,255,255,.3);
+    height: 1px;
+    display: block;
+    margin-left: 9px;
+    margin-top: -2px;
+}
+
+.compose-mode .parent-md_tabs .vc_control-btn-delete:before ,
+.compose-mode .parent-md_modernTabs .vc_control-btn-delete:before,
+.compose-mode .parent-md_toggle .vc_control-btn-delete:before ,
+.compose-mode .parent-md_toggle2 .vc_control-btn-delete:before ,
+.compose-mode .parent-md_accordion .vc_control-btn-delete:before { margin-left:0;}
+
+
+.compose-mode .parent-md_tabs .vc_element-move:after,
+.compose-mode .parent-md_modernTabs .vc_element-move:after,
+.compose-mode .parent-md_toggle .vc_element-move:after,
+.compose-mode .parent-md_toggle2 .vc_element-move:after,
+.compose-mode .parent-md_accordion .vc_element-move:after{
+    position: absolute;
+    top: 59px;
+    left: 1px;
+}
+
+.compose-mode .vc_parent.parent-md_tabs .vc_advanced,
+.compose-mode .vc_parent.parent-md_modernTabs .vc_advanced,
+.compose-mode .vc_parent.parent-md_toggle .vc_advanced,
+.compose-mode .vc_parent.parent-md_toggle2 .vc_advanced,
+.compose-mode .vc_parent.parent-md_accordion .vc_advanced{
+    width: auto;
+}
+
+.compose-mode .vc_advanced .vc_control-btn-prepend.vc_edit .vc_btn-content{
+    display: none !important;
+}
+
+.compose-mode .vc_parent.parent-md_tabs .vc_advanced,
+.compose-mode .vc_parent.parent-md_modernTabs .vc_advanced,
+.compose-mode .vc_parent.parent-md_toggle .vc_advanced,
+.compose-mode .vc_parent.parent-md_toggle2 .vc_advanced,
+.compose-mode .vc_parent.parent-md_accordion .vc_advanced{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.compose-mode .vc_controls-out-tr .parent-md_tabs  .vc_control-btn-edit,
+.compose-mode .vc_controls-out-tr .parent-md_modernTabs  .vc_control-btn-edit,
+.compose-mode .vc_controls-out-tr .parent-md_accordion  .vc_control-btn-edit,
+.compose-mode .vc_controls-out-tr .parent-md_toggle  .vc_control-btn-edit,
+.compose-mode .vc_controls-out-tr .parent-md_toggle2  .vc_control-btn-edit{
+    background: url(../img/vc-ui-icons/tab_setting.png) no-repeat center 8px;
+    width: 30px;
+    height: 30px;
+}
+
+.compose-mode .vc_controls-out-tr .parent-md_tabs  .vc_control-btn-edit:hover,
+.compose-mode .vc_controls-out-tr .parent-md_modernTabs  .vc_control-btn-edit:hover,
+.compose-mode .parent-md_tabs .vc_element-move:hover{
+    background-color: transparent;
+}
+
+.compose-mode .vc_controls-out-tr .parent-md_tabs  .vc_control-btn-delete,
+.compose-mode .vc_controls-out-tr .parent-md_modernTabs  .vc_control-btn-delete,
+.compose-mode .vc_controls-out-tr .parent-md_accordion  .vc_control-btn-delete,
+.compose-mode .vc_controls-out-tr .parent-md_toggle  .vc_control-btn-delete,
+.compose-mode .vc_controls-out-tr .parent-md_toggle2  .vc_control-btn-delete{
+    position: absolute;
+    bottom: 2px;
+    right: 8px;
+    background-color: transparent;
+}
+
+
+
+.compose-mode .vc_controls-out-tr .parent-md_tabs  .vc_control-btn-delete .vc_btn-content,
+.compose-mode .vc_controls-out-tr .parent-md_modernTabs  .vc_control-btn-delete .vc_btn-content,
+.compose-mode .vc_controls-out-tr .parent-md_accordion  .vc_control-btn-delete .vc_btn-content,
+.compose-mode .vc_controls-out-tr .parent-md_toggle  .vc_control-btn-delete .vc_btn-content,
+.compose-mode .vc_controls-out-tr .parent-md_toggle2  .vc_control-btn-delete .vc_btn-content{
+    background-color: transparent !important;
+    width: 22px;
+    padding-left: 3px;
+}
+
+/*  Tab  */
+
+.compose-mode .vc_element.element-md_tab,
+.compose-mode .vc_element.element-md_modernTab,
+.compose-mode .vc_element.element-md_accordion_tab,
+.compose-mode .vc_element.element-md_toggle_tab,
+.compose-mode .vc_element.element-md_toggle_tab2{
+    background-color: #2a2a28;
+    position: absolute;
+}
+
+.compose-mode .vc_element.element-md_accordion_tab,
+.compose-mode .vc_element.element-md_toggle_tab,
+.compose-mode .vc_element.element-md_toggle_tab2{
+    top: 50px;
+    left: 50%;
+}
+
+.compose-mode .vc_element.element-md_tab,
+.compose-mode .vc_element.element-md_modernTab{
+    left: 4px;
+}
+
+.compose-mode .vc_controls-column > div > .element-md_tab.vc_element .vc_advanced:before,
+.compose-mode .vc_controls-column > div > .element-md_modernTab.vc_element .vc_advanced:before,
+.compose-mode .vc_controls-column > div > .vc_md_modernTab.vc_element .vc_advanced:before{
+    content: "";
+    background: url(../img/vc-ui-icons/up.png) no-repeat;
+    width: 7px;
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vc_md_accordion .vc_md_accordion_tab:nth-of-type(1) .parent-md_accordion,
+.vc_md_toggle .vc_md_toggle_tab:nth-of-type(1) .parent-md_toggle,
+.vc_md_toggle2 .vc_md_toggle_tab2:nth-of-type(1) .parent-md_toggle2{
+    opacity: 1;
+    display: block!important;
+}
+.vc_md_accordion .vc_md_accordion_tab:not(:first-child) .parent-md_accordion,
+.vc_md_toggle .vc_md_toggle_tab:not(:first-child) .parent-md_toggle,
+.vc_md_toggle2 .vc_md_toggle_tab2:not(:first-child) .parent-md_toggle2{
+    display: none!important;
+}
+
+.compose-mode .element-md_tab .vc_control-btn-edit,
+.compose-mode .element-md_tab .vc_control-btn-clone,
+.compose-mode .element-md_tab .vc_control-btn-delete,
+.compose-mode .element-md_accordion_tab .vc_control-btn-edit,
+.compose-mode .element-md_accordion_tab .vc_control-btn-clone,
+.compose-mode .element-md_accordion_tab .vc_control-btn-delete,
+.compose-mode .element-md_modernTab .vc_control-btn-edit,
+.compose-mode .element-md_modernTab .vc_control-btn-clone,
+.compose-mode .element-md_modernTab .vc_control-btn-delete,
+.compose-mode .element-md_toggle_tab .vc_control-btn-edit,
+.compose-mode .element-md_toggle_tab .vc_control-btn-clone,
+.compose-mode .element-md_toggle_tab .vc_control-btn-delete,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-edit,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-clone,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-delete{
+    width: 33px;
+    height: 31px;
+}
+
+.compose-mode .element-md_tab .vc_control-btn-edit,
+.compose-mode .element-md_modernTab  .vc_control-btn-edit,
+.compose-mode .element-md_toggle_tab .vc_control-btn-edit,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-edit,
+.compose-mode .element-md_accordion_tab .vc_control-btn-edit{
+    background: url(../img/vc-ui-icons/setting.png) no-repeat 9px 7px;
+}
+
+.compose-mode .element-md_tab .vc_control-btn-clone,
+.compose-mode .element-md_modernTab .vc_control-btn-clone,
+.compose-mode .element-md_toggle_tab .vc_control-btn-clone,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-clone,
+.compose-mode .element-md_accordion_tab .vc_control-btn-clone{
+    background: url(../img/vc-ui-icons/clone.png) no-repeat center;
+}
+
+.compose-mode .element-md_tab .vc_control-btn-edit:after,
+.compose-mode .element-md_modernTab .vc_control-btn-edit:after,
+.compose-mode .element-md_accordion_tab .vc_control-btn-clone:before,
+.compose-mode .element-md_accordion_tab .vc_control-btn-clone:after,
+.compose-mode .element-md_toggle_tab .vc_control-btn-clone:before,
+.compose-mode .element-md_toggle_tab .vc_control-btn-clone:after,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-clone:before,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-clone:after{
+    content: "";
+    color: #FFFFFF;
+    width: 1px;
+    height: 14px;
+    margin: 8px 0;
+    display: inline-block;
+    background-color: #959594;
+    position: absolute;
+}
+
+.compose-mode .element-md_tab .vc_control-btn-edit:after,
+.compose-mode .element-md_modernTab .vc_control-btn-edit:after{
+    left: 33px;
+}
+
+.compose-mode .element-md_accordion_tab .vc_control-btn-clone:after,
+.compose-mode .element-md_toggle_tab .vc_control-btn-clone:after,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-clone:after{
+    left: 65px;
+}
+
+.compose-mode .element-md_tab .vc_control-btn-delete,
+.compose-mode .element-md_modernTab .vc_control-btn-delete,
+.compose-mode .element-md_toggle_tab .vc_control-btn-delete,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-delete,
+.compose-mode .element-md_accordion_tab .vc_control-btn-delete{
+    background: url(../../../assets/img/delete.png) no-repeat center;
+}
+
+.compose-mode .element-md_tab .vc_control-btn-edit:hover,
+.compose-mode .element-md_tab .vc_control-btn-clone:hover,
+.compose-mode .element-md_tab .vc_control-btn-delete:hover,
+.compose-mode .element-md_accordion_tab .vc_control-btn-edit:hover,
+.compose-mode .element-md_accordion_tab .vc_control-btn-clone:hover,
+.compose-mode .element-md_accordion_tab .vc_control-btn-delete:hover,
+.compose-mode .element-md_modernTab .vc_control-btn-edit:hover,
+.compose-mode .element-md_modernTab .vc_control-btn-clone:hover,
+.compose-mode .element-md_modernTab .vc_control-btn-delete:hover,
+.compose-mode .element-md_toggle_tab .vc_control-btn-edit:hover,
+.compose-mode .element-md_toggle_tab .vc_control-btn-clone:hover,
+.compose-mode .element-md_toggle_tab .vc_control-btn-delete:hover,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-edit:hover,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-clone:hover,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-delete:hover{
+    background-color: rgba(0,0,0,.5);
+}
+
+.compose-mode .vc_advanced .vc_control-btn-prepend.vc_edit,
+.compose-mode .vc_controls-out-tr .parent-md_tabs  .vc_control-btn.vc_control-btn-edit.vc_edit .vc_btn-content,
+.compose-mode .vc_controls-out-tr .parent-md_tabs .vc_control-btn-clone,
+.compose-mode .parent-md_tabs .vc_control-btn-switcher,
+.compose-mode .vc_controls-out-tr .parent-md_accordion  .vc_control-btn.vc_control-btn-edit.vc_edit .vc_btn-content,
+.compose-mode .vc_controls-out-tr .parent-md_accordion .vc_control-btn-clone,
+.compose-mode .parent-md_accordion .vc_control-btn-switcher,
+.compose-mode .element-md_tab .vc_move-md_tab.vc_element-move,
+.compose-mode .element-md_tab .vc_control-btn-prepend,
+.compose-mode .element-md_tab .vc_control-btn-edit .vc_btn-content,
+.compose-mode .element-md_tab .vc_control-btn-clone .vc_btn-content,
+.compose-mode .element-md_tab .vc_control-btn-delete .vc_btn-content,
+.compose-mode .element-md_accordion_tab .vc_move-md_accordion_tab.vc_element-move,
+.compose-mode .element-md_accordion_tab .vc_control-btn-prepend,
+.compose-mode .element-md_accordion_tab .vc_control-btn-edit .vc_btn-content,
+.compose-mode .element-md_accordion_tab .vc_control-btn-clone .vc_btn-content,
+.compose-mode .element-md_accordion_tab .vc_control-btn-delete .vc_btn-content,
+.parent-md_tabs .vc_move-md_tabs.vc_element-move .vc_btn-content.vc_btn-content.vc_btn-content,
+.compose-mode .element-md_tab .vc_control-btn-clone,
+.compose-mode .vc_controls-out-tr .parent-md_modernTabs  .vc_control-btn.vc_control-btn-edit.vc_edit .vc_btn-content,
+.compose-mode .vc_controls-out-tr .parent-md_modernTabs .vc_control-btn-clone,
+.compose-mode .parent-md_modernTabs .vc_control-btn-switcher,
+.parent-md_modernTabs .vc_move-md_modernTabs.vc_element-move .vc_btn-content.vc_btn-content.vc_btn-content,
+.compose-mode .element-md_modernTab .vc_move-md_modernTab.vc_element-move,
+.compose-mode .element-md_modernTab .vc_control-btn-prepend,
+.compose-mode .element-md_modernTab .vc_control-btn-edit .vc_btn-content,
+.compose-mode .element-md_modernTab .vc_control-btn-clone .vc_btn-content,
+.compose-mode .element-md_modernTab .vc_control-btn-delete .vc_btn-content,
+.compose-mode .element-md_modernTab .vc_control-btn-clone,
+
+.compose-mode .element-md_toggle_tab .vc_move-md_toggle_tab.vc_element-move,
+.compose-mode .element-md_toggle_tab .vc_control-btn-prepend,
+.compose-mode .element-md_toggle_tab .vc_control-btn-edit .vc_btn-content,
+.compose-mode .element-md_toggle_tab .vc_control-btn-clone .vc_btn-content,
+.compose-mode .element-md_toggle_tab2 .vc_move-md_toggle_tab2.vc_element-move,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-prepend,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-edit .vc_btn-content,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-clone .vc_btn-content,
+.compose-mode .vc_controls-out-tr .parent-md_toggle  .vc_control-btn.vc_control-btn-edit.vc_edit .vc_btn-content,
+.compose-mode .vc_controls-out-tr .parent-md_toggle .vc_control-btn-clone,
+.compose-mode .vc_controls-out-tr .parent-md_toggle2  .vc_control-btn.vc_control-btn-edit.vc_edit .vc_btn-content,
+.compose-mode .vc_controls-out-tr .parent-md_toggle2 .vc_control-btn-clone,
+.compose-mode .parent-md_toggle .vc_control-btn-switcher ,
+.compose-mode .parent-md_toggle2 .vc_control-btn-switcher ,
+.compose-mode .vc_move-md_accordion .vc_btn-content.vc_btn-content.vc_btn-content.vc_btn-content,
+.compose-mode .vc_move-md_toggle .vc_btn-content.vc_btn-content.vc_btn-content.vc_btn-content,
+.compose-mode .vc_move-md_toggle2 .vc_btn-content.vc_btn-content.vc_btn-content.vc_btn-content,
+.compose-mode .element-md_toggle_tab .vc_control-btn-delete .vc_btn-content.vc_btn-content.vc_btn-content.vc_btn-content,
+.compose-mode .element-md_toggle_tab2 .vc_control-btn-delete .vc_btn-content.vc_btn-content.vc_btn-content.vc_btn-content{
+    display: none !important;
+}
+
+.compose-mode .vc_element:hover > .wpb_row > .vc_element:before,
+.view-mode .vc_element:hover > .wpb_row > .vc_element:before,
+.compose-mode .vc_element.vc_hover > .wpb_row > .vc_element:before,
+.view-mode .vc_element.vc_hover > .wpb_row > .vc_element:before,
+.compose-mode .vc_element.vc_hold-hover > .wpb_row > .vc_element:before,
+.view-mode .vc_element.vc_hold-hover > .wpb_row > .vc_element:before{
+    outline: none !important;
+    border: 1px dashed rgba(125, 125, 125, 0.4) ;
+    border-bottom: none;
+    border-top: none;
+}
+
+/* "vc_column_container" This is a generic class, but you can give it a parent to make it more specific */
+.compose-mode .vc_element.vc_empty .vc_empty-element > .vc_element-container,
+.view-mode .vc_element.vc_empty .vc_empty-element > .vc_element-container{
+    min-height: 300px !important;
+}
+
+.compose-mode .vc_controls > .vc_controls-bc{
+    display: none;
+    z-index:9!important;
+}
+.compose-mode .vc_controls-bc .vc_control-btn .vc_btn-content:hover{
+    background-color: #e78800!important;
+}
+/* Gizmo Controller Helper Change Color*/
+.compose-mode .vc_helper.vc_helper-vc_row{
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    background: #fff !important;
+    color: #444 !important;
+}
+.compose-mode .vc_helper {
+    border: 1px solid #ccc !important;
+    background-color: #fff !important;
+    color: #444 !important;
+}
+
+.compose-mode .vc_md_portfolio_multisize .vc_controls .vc_controls-cc{
+    width: 318px;
+    height: 48px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top:130px !important;
+    background: transparent url(../img/vc-ui-icons/portfolio-gizmo.png) no-repeat 0 -48px;
+    transition: background-position .3s;
+}
+
+.compose-mode .vc_md_portfolio_multisize:hover .vc_controls .vc_controls-cc{
+    background-position: 0;
+}
+
+.compose-mode .vc_md_portfolio_multisize .vc_controls .vc_controls-cc:hover{
+    border: none;
+    border-image: none;
+    background-color: transparent !important;
+}
+
+.compose-mode .vc_md_portfolio_multisize .vc_controls > .vc_controls-cc .vc_element-move{
+    width: 40px;
+    right: 0px;
+    left: auto;
+}
+
+.compose-mode .vc_md_portfolio_multisize .vc_controls > .vc_controls-cc .vc_control-btn-delete{
+    width: 43px;
+    right: 41px;
+    position: absolute;
+    height: 100%;
+    left: auto!important;
+    top: auto;
+    bottom: auto;
+    background: none;
+    border-radius: 0;
+}
+
+.compose-mode .vc_md_portfolio_multisize .vc_controls > .vc_controls-cc .vc_control-btn-clone{
+    margin: 0;
+    position: absolute;
+    right: 85px;
+    left: auto!important;
+    width: 53px;
+    height: 48px;
+    background:none ;
+}
+
+.compose-mode .vc_md_portfolio_multisize .vc_controls > .vc_controls-cc .vc_control-btn-edit{
+    position: absolute;
+    margin: 0;
+    right: 139px;
+    left: auto!important;
+    width: 47px;
+    height: 48px;
+    background:none ;
+}
+
+.compose-mode .vc_md_portfolio_multisize .vc_controls > .vc_controls-cc .vc_control-btn-edit:after{
+    display: none;
+}
+
+.compose-mode .vc_md_portfolio_multisize .vc_controls > .vc_controls-cc .vc_element-move:hover,
+.compose-mode .vc_md_portfolio_multisize .vc_controls > .vc_controls-cc .vc_control-btn-delete:hover,
+.compose-mode .vc_md_portfolio_multisize .vc_controls > .vc_controls-cc .vc_control-btn-clone:hover,
+.compose-mode .vc_md_portfolio_multisize .vc_controls > .vc_controls-cc .vc_control-btn-edit:hover{
+    background: rgba(0,0,0,.25);
+}
+
+.compose-mode .wpb_content_element .wpb_tabs_nav.wpb_tabs_nav{
+    z-index: 0;
+}
+.compose-mode .wpb_tab .vc_vc_column_text{
+    min-height: 0;
+}
+.compose-mode .wpb_tab .wpb_content_element{
+    margin-bottom:0;
+}
+.vc_welcome .vc_buttons{
+    margin-top:0!important;
+}
+
+/**/
+#vc_no-content-helper.vc_welcome{
+    margin: 75px 0;
+}
+
+
+#vc_no-content-helper.vc_welcome:not(.vc_not-empty) {
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 99;
+    background-color:#FFFFFF;
+    position: absolute;
+}
+.compose-mode #vc_no-content-helper .desc,
+.compose-mode #vc_no-content-helper .head{
+    transform:translate(-50%,50%);
+}
+
+#vc_no-content-helper.vc_not-empty{
+    margin: 0;
+    height: auto!important;
+}
+#vc_no-content-helper.vc_not-empty:last-of-type{
+    display: none;
+}
+#vc_no-content-helper .wpb_row.vc_row-fluid {
+    margin-top: -85px;
+}
+
+
+.compose-mode #vc_no-content-add-text-block,
+.compose-mode .vc_welcome-brand,
+.compose-mode .vc_ui-help-block,
+.compose-mode .vc_separator.vc_sep_dashed.vc_separator_align_center.vc_el_width_100.vc_sep_color_outline_grey,
+.compose-mode .vc_welcome .icon{
+    display: none;
+}
+
+.compose-mode .vc_welcome{
+    border: none;
+}
+
+.compose-mode .vc_welcome h5{
+    font-size: 45px;
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+}
+
+.compose-mode .vc_welcome h5:after{
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: #000000;
+    display: block;
+    margin:25px auto;
+}
+
+.compose-mode  .vc_welcome h3{
+    font-weight: 300;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 21px;
+    margin-bottom: 70px;
+}
+
+.vc_welcome-header.vc_welcome-visible-e,
+.vc_welcome-brand.vc_welcome-visible-e{
+    opacity: 0;
+}
+
+/*portfolio backend*/
+
+.portfolio-templates .clearfix{
+    display: inline-block;
+}
+
+.md-template-button{
+    display: inline-block;
+    float: left;
+    margin-right: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.md-template-button:before {
+    content: "";
+    background:  url(../../assets/img/vc-ui-icons/layout-hover.png) no-repeat center center;
+    width: 85px;
+    height: 110px;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    transition: background-image .4s;
+}
+
+.md-template-button:hover:before{
+    opacity: 1;
+}
+
+.md-template-button.clicked:after{
+    content: "";
+    width: 85px;
+    height: 110px;
+    background: url(../../assets/img/vc-ui-icons/checked.png) no-repeat center center;
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+.md-template-button:last-child{
+    margin-right: 0;
+}
+
+.md-template-button .image{
+    display: inline-block;
+    width: 85px;
+    height: 110px;
+}
+
+.md-template-button.custom .image{
+    background: url("../img/vc-ui-icons/blank.png") no-repeat center;
+}
+
+.md-template-button.fancy .image{
+    background: url("../img/vc-ui-icons/fancy.png") no-repeat center;
+}
+
+.md-template-button.split .image{
+    background: url("../img/vc-ui-icons/split.png") no-repeat center;
+}
+
+.md-template-button.fullwidth .image{
+    background: url("../img/vc-ui-icons/fullwidth.png") no-repeat center;
+}
+
+.md-template-button.center .image{
+    background: url("../img/vc-ui-icons/center.png") no-repeat center;
+}
+
+.md-template-button .name{
+    display: block;
+    color: #cacaca;
+    font-size: 12px;
+    text-transform: none;
+}
+
+/*not empty page*/
+.vc_not-empty #vc_no-content-add-element,
+.vc_not-empty .head,
+.vc_not-empty .desc{
+    display: none;
+}
+
+.compose-mode:not(.post-type-portfolio)  .md-blank-btn.vc_general {
+    background: url("../../assets/img/vc-ui-icons/builder-blank.png") no-repeat center;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    text-decoration: none;
+    position: relative;
+    transition: none;
+    text-indent: -99999px;
+    width: 157px;
+    height: 147px;
+}
+
+.compose-mode:not(.post-type-portfolio) #vc_no-content-helper .md-blank-btn.vc_general:hover {
+    background: url("../../assets/img/vc-ui-icons/builder-blank-hover.png") no-repeat center;
+}
+
+.compose-mode.post-type-portfolio .vc_templates-image.clicked:after{
+    content: "";
+    width: 85px;
+    height: 110px;
+    background: url(../../assets/img/vc-ui-icons/checked.png) no-repeat center center;
+    display: block;
+    position: absolute;
+    top: 10px;
+}
+
+.compose-mode .vc_panel-tab .vc_templates-image.clicked:after{
+    top: 22px;
+}
+
+.compose-mode #vc_no-content-helper .md-blank-btn.clicked:after{
+    top: 0;
+}
+
+.custom_template_for_vc_custom_template p,
+#vc_no-content-helper .md-blank-btn span{
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: rgba(0,0,0,.7);
+    margin: 13px 20px;
+    line-height: 12px;
+    width: 85px;
+}
+
+#vc_no-content-helper .md-blank-btn span{
+    margin: 13px 0;
+    display: block;
+    position: absolute;
+    bottom: -38px;
+}
+
+.compose-mode .vc_templates-image:hover:before{
+    opacity: 1;
+}
+
+.vc_default-templates .vc_template.custom_template_for_vc_custom_template {
+    padding: 10px 0;
+}
+.compose-mode .vc_vc_row .vc_row .wrap,
+.compose-mode .vc_vc_row_inner .vc_row_inner{
+    transition: border 0.3s;
+}
+
+.compose-mode .vc_vc_row .vc_row .wrap:hover:before,
+.compose-mode .vc_vc_row_inner .vc_row_inner:hover .wrap:before{
+border: 3px solid rgba(0,0,0,0.2);
+position: absolute;
+content: "";
+top: -2px;
+bottom: 0;
+left: 0;
+right: 0;
+display: block;
+z-index: 0;
+}
+.compose-mode .vc_vc_row .vc_row .wrap:hover:after,
+.compose-mode .vc_vc_row_inner .vc_row_inner:hover .wrap:after {
+clear:both;
+content: " ";
+display: block;
+}
+
+.compose-mode .status-publish:not(.type-portfolio) .vc_template{
+    display: none;
+}
+
+
+.compose-mode .vc_empty_space{
+    background: transparent url("../img/vc-ui-icons/pattern.png") repeat;
+}
+
+.wp-pointer-top.wp-pointer-top,.wp-pointer{display: none;}
+
+.compose-mode #vc_no-content-helper .md-blank-btn.md-blank-btn{ margin-top: -48px; }
+
+.compose-mode .vc_welcome .head{
+    font-size: 35px;
+    line-height: 40px;
+    margin: -40px 0px 22px;
+    font-weight: 700;
+    color: #bfbfbf;
+}
+
+.compose-mode .vc_welcome .desc{
+    font-size: 18px;
+    color: #cecece;
+    margin: 0;
+    font-weight: 100;
+    letter-spacing: 0;
+    line-height: 32px;
+}
+
+.compose-mode .vc_welcome .head:after{display: none;}
+
+body:not(.post-type-portfolio) .vc_welcome .vc_templates-image span{display: none;}
+.compose-mode #vc_no-content-helper{
+    transition: all .2s;
+}
+.compose-mode #vc_no-content-helper.droppable-hover,.compose-mode .vc_empty-element.droppable-hover{
+    transform: scale(.9);
+}
+
+.compose-mode #vc_no-content-helper .md-blank-btn.vc_general,
+.compose-mode .vc_welcome .head,
+.compose-mode .vc_welcome .desc{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-75%);
+}
+
+.compose-mode .vc_controls-column>div>.vc_active.element-vc_column .vc_advanced,
+.compose-mode .vc_controls-column>div>.vc_active.element-vc_column_inner .vc_advanced,
+.compose-mode .vc_controls-container>div>.vc_active.element-vc_column .vc_advanced,
+.compose-mode .vc_controls-container>div>.vc_active.element-vc_column_inner .vc_advanced,
+.compose-mode .vc_controls-row>div>.vc_active.element-vc_column .vc_advanced,
+.compose-mode .vc_controls-row>div>.vc_active.element-vc_column_inner .vc_advanced{
+    width: 42px !important;
+}
+
+/*not empty page*/
+.vc_not-empty #vc_no-content-add-element,
+.vc_not-empty .head,
+.vc_not-empty .desc{
+    display: none;
+}
+
+.wp-pointer{display: none;}
+
+.compose-mode .vc_empty-element>.vc_column-inner .vc_element-container{
+    min-height:300px;
+}
+
+.insert-between-placeholder,.insert-after-row-placeholder{
+    position: relative;
+    transition: height .4s;
+    height:0;
+    visibility: hidden;
+}
+.droppable-hover .insert-between-placeholder,.droppable-hover-show .insert-between-placeholder{
+    visibility: visible;
+}
+.insert-after-row-placeholder{
+    overflow: hidden;
+}
+.insert-between-placeholder .drop-here,.insert-after-row-placeholder .drop-here{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    z-index: 9999999;
+}
+.insert-between-placeholder .drop-here:before, .insert-after-row-placeholder .drop-here:before{
+    content: '\e608';
+    font-family: 'pixflow-font-library', Roboto;
+    display: inline-block;
+    padding-top:12px;
+    color: #949494;
+    height:40px;
+    width:40px;
+    background: rgb(238, 238, 238);
+    border:2px solid #9A9A9A;
+    border-radius:100%;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.insert-after-row-placeholder .drop-here:before{
+    border-color: #fff;
+    content: "Add To New Row";
+    color: #50485b;
+    background: #fff;
+    font-size: 13px;
+    width: auto;
+    border-radius: 30px;
+    height: 40px;
+    padding: 12px 30px;
+}
+
+.insert-between-placeholder-open{
+    height:100px;
+    border:2px dashed #9A9A9A;
+    background: url("../img/vc-ui-icons/pattern2.png") repeat;
+}
+.insert-after-row-placeholder-open{
+    background: url("../img/vc-ui-icons/pattern2-green.png") repeat;
+    visibility: visible;
+    height:150px;
+    border:2px dashed #43dc9d;
+}
+.insert-between-placeholder .info{
+    display: none;
+}
+.insert-between-placeholder.insert-between-placeholder-open .info{
+    text-align: left;
+    padding: 4px 9px;
+    font-size: 12px;
+    color: #777777;
+    background: #fff;
+    display: inline-block;
+    float: left;
+    margin: 8px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.insert-between-placeholder:after,.insert-after-row-placeholder:after{
+    content: ' ';
+    display: block;
+    border-bottom:2px dashed #9A9A9A;
+    position: absolute;
+    top:50%;
+    width:100%;
+    transform: translateY(-50%);
+}
+.insert-after-row-placeholder:after{
+    border-color: #43dc9d;
+}
+
+.insert-between-placeholder.insert-between-placeholder-open:after,.insert-after-row-placeholder.insert-after-row-placeholder-open:after{
+    display: none;
+}
+.insert-between-placeholder-open .drop-here:after,.insert-after-row-placeholder-open .drop-here:after{
+    content: 'MOVE HERE';
+    display: block;
+    letter-spacing:2px;
+    font-weight: bold;
+    margin-top:5px;
+    color: #999;
+}
+.insert-between-placeholder-open .drop-here:before{
+    animation:rotate-me 400ms linear;
+}
+.insert-after-row-placeholder-open .drop-here:after{
+    content: '';
+}
+
+@keyframes rotate-me {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-90deg);
+    }
+}
+
+
+/********************* Skip Header Responsive in customizer *********************************/
+@media (max-width: 1280px){
+    nav.hidden-tablet,
+    .icons-pack.hidden-tablet{
+        display: block !important;
+    }
+    .navigation-button.visible-tablet,
+    .mobile-shopcart.visible-tablet{
+        display: none!important;
+    }
+    header .content nav.navigation.hidden-tablet{
+        display: inline-table!important;
+    }
+    .gather-btn.hidden-tablet{
+        display: block!important;
+    }
+    .logo-top-container.hidden-tablet{
+        display: block!important;
+    }
+
+}

@@ -1,0 +1,137 @@
+/* error page */
+
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    background-color: transparent;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+img {
+    border: 0;
+}
+.device-error{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    text-align: center;
+    margin-top: 15px;
+}
+.media{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    max-width: 355px;
+}
+.image{
+
+}
+p{
+    margin: 0;
+    color: #5e5e5e;
+}
+.title{
+    font-size: 67px;
+    line-height: 67px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+.description{
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 20px;
+
+}
+
+.dashboard{
+    font-size: 14px;
+    line-height: 44px;
+    color: #5e5e5e;
+    margin-top: 25px;
+    border:2px solid #5e5e5e;
+    border-radius: 35px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 40px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.dashboard:hover{
+    background-color: #5e5e5e;
+    color: #fff;
+}
+
+@media (max-width: 767px) and (orientation: portrait){
+    .media{
+        width:75%;
+        top:0;
+        transform: translate(-50%,0);
+    }
+
+    img{max-height: 180px;}
+
+    .title{
+        font-size: 45px;
+        line-height: 50px;
+        margin-top: 0;
+    }
+
+    .description{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape){
+    .media{
+        width:80%;
+        max-width: 100%;
+        top:0;
+        transform: translate(-50%,0);
+    }
+    .left,
+    .right{
+        width: 43%;
+        float: left;
+    }
+
+    .right{
+        width: 57%;
+    }
+
+    img{max-height: 150px;}
+
+    .title{
+        font-size: 30px;
+        line-height: 32px;
+        margin-top: 0;
+    }
+
+    .description{
+        margin-bottom: 0;
+    }
+
+    .dashboard{
+        line-height: 40px;
+        margin-top: 10px;
+        padding: 0 30px;
+    }
+}
